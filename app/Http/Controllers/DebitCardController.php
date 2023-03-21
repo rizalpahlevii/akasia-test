@@ -9,6 +9,7 @@ use App\Http\Requests\DebitCardUpdateRequest;
 use App\Http\Resources\DebitCardResource;
 use App\Models\DebitCard;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
 use Symfony\Component\HttpFoundation\Response as HttpResponse;
@@ -87,7 +88,7 @@ class DebitCardController extends BaseController
      * @param DebitCard               $debitCard
      *
      * @return JsonResponse
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy(DebitCardDestroyRequest $request, DebitCard $debitCard)
     {
